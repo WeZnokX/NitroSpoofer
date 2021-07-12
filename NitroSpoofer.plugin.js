@@ -201,3 +201,4 @@ module.exports = (() => {
     })(global.ZeresPluginLibrary.buildPlugin(config));
 })();
 /*@end@*/
+
