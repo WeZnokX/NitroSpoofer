@@ -114,7 +114,7 @@ module.exports = (() => {
                                     clearInterval(this.screenShareFix)
                                 }, 100)
                                 break;
-                            default: //if user doesn't have nitro?
+                            default:
                                 BdApi.injectCSS("screenShare", `#app-mount > div.layerContainer-yqaFcK > div.layer-2KE1M9 > div > div > form > div:nth-child(2) > div > div > div.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.modalContent-BM7Qeh > div:nth-child(1) > div > button:nth-child(4) {
                                     display: none;
                                   }
@@ -136,14 +136,12 @@ module.exports = (() => {
                     if (this.settings.screenSharing) BdApi.clearCSS("screenShare")
 
                     if (this.settings.emojiBypass) {
-                        //fix emotes with bad method
                         Patcher.before(DiscordModules.MessageActions, "sendMessage", (_, [, msg]) => {
                             msg.validNonShortcutEmojis.forEach(emoji => {
                                 if (emoji.url.startsWith("/assets/")) return;
                                 msg.content = msg.content.replace(`<${emoji.animated ? "a" : ""}${emoji.allNamesString.replace(/~\d/g, "")}${emoji.id}>`, emoji.url + `&size=${this.settings.emojiSize} `)
                             })
                         });
-                        //for editing message also
                         Patcher.before(DiscordModules.MessageActions, "editMessage", (_,obj) => {
                             let msg = obj[2].content
                             if (msg.search(/\d{18}/g) == -1) return;
