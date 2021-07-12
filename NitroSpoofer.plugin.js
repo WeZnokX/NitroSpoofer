@@ -1,8 +1,8 @@
 /**
  * @name NitroSpoofer
  * @website https://github.com/WeZnokX/NitroSpoofer
- * @source https://raw.githubusercontent.com/respecting/NitroPerks/main/NitroPerks.plugin.js
- * @updateUrl https://raw.githubusercontent.com/respecting/NitroPerks/main/NitroPerks.plugin.js
+ * @source https://raw.githubusercontent.com/WeZnokX/NitroSpoofer/main/NitroSpoofer.plugin.js
+ * @updateUrl https://raw.githubusercontent.com/WeZnokX/NitroSpoofer/main/NitroSpoofer.plugin.js
  */
 /*   Ce plugin est un projet abandonné par le créateur. J'ai donc décidé de le reprendre en le traduisant en français et en ajoutant certains trucs. 
      Ceci n'est PAS du skid. Ce projet est open source et vous pouvez créer votre propre script avec.*/
@@ -10,16 +10,16 @@
 module.exports = (() => {
     const config = {
         "info": {
-            "name": "NitroPerks",
+            "name": "Nitro Spoofer",
             "authors": [{
                 "name": "WeZnokX",
-                "discord_id": "407348579376693260",
+                "discord_id": "710567719979712653",
                 "github_username": "WeZnokX"
             }],
             "version": "1.0",
             "description": "Vous permet de débloquer tout les modes de streaming, la photo de profil au format GIF et les emotes Nitro. (La limite de 100MB N'EST PAS débloquée. :/)",
             "github": "https://github.com/WeZnokX/NitroSpoofer",
-            "github_raw": "https://raw.githubusercontent.com/respecting/NitroPerks/main/NitroPerks.plugin.js"
+            "github_raw": "https://raw.githubusercontent.com/WeZnokX/NitroSpoofer/main/NitroSpoofer.plugin.js"
         },
         "main": "NitroSpoofer.plugin.js"
     };
